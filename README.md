@@ -1,4 +1,4 @@
-# Kong API Gateway Image 
+# Kong API Gateway Docker Image 
 
 This is a [Kong](https://getkong.org) based image with a Nginx server to redirect requests to the https port.
 
