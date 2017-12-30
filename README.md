@@ -1,10 +1,10 @@
-# Kong API Gateway Docker Image 
+# Kong API Gateway Docker Image
 
 This is a [Kong](https://getkong.org) based image with a Nginx server to redirect requests to the https port.
 
-Basically it adds the Nginx server below with a 301 redirect to https port.
+Basically it adds the Nginx server configuration below with a 301 redirect to https port.
 
-```
+```nginx
 server {
     listen 8080;
     server_name localhost;
@@ -12,8 +12,9 @@ server {
 }
 ```
 
-It also set the follogin properties to Kong:
-```
+It also set the following properties to Kong:
+
+```bash
 - KONG_SSL_CIPHER_SUITE=intermediate
 - KONG_ADMIN_ERROR_LOG=/dev/stderr
 - KONG_PROXY_ERROR_LOG=/dev/stderr
