@@ -1,4 +1,4 @@
-FROM kong:0.11
+FROM kong:0.12.1
 
 ENV KONG_SSL_CIPHER_SUITE=intermediate
 ENV KONG_ADMIN_ERROR_LOG=/dev/stderr
@@ -6,6 +6,8 @@ ENV KONG_PROXY_ERROR_LOG=/dev/stderr
 ENV KONG_ADMIN_ACCESS_LOG=/dev/stdout
 ENV KONG_PROXY_ACCESS_LOG=/dev/stdout
 ENV KONG_PROXY_LISTEN_SSL=0.0.0.0:443
+ENV KONG_ADMIN_LISTEN=0.0.0.0:8001
+ENV KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444
 
 COPY custom_nginx.template /usr/local/kong/custom_nginx.template
 
